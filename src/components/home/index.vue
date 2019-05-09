@@ -11,19 +11,21 @@
 					</el-col>
 					<el-col :span="12">
 						<div class="grid-content bg-purple-light" style="text-align: right;">
-							<span class="el-icon-user-solid" title="个人中心"></span>
+							<span class="el-icon-user-solid a" title="个人中心" @click="to('personal')"></span>
 							&nbsp;
-							<span class="el-icon-switch-button" title="注销" @click="logout"></span>
+							<span class="el-icon-switch-button a" title="注销" @click="logout"></span>
 						</div>
 					</el-col>
 				</el-row>
 			</el-header>
 			<el-container>
-				<el-aside width="200px">
+				<el-aside width="210px">
 					<menus></menus>
 				</el-aside>
 				<el-container>
-					<el-main>Main</el-main>
+					<el-main>
+						<router-view />
+					</el-main>
 					<el-footer>
 						版权所有@2019
 					</el-footer>
@@ -50,6 +52,12 @@
 				this.$router.push({
 					path: '/'
 				});
+			},
+			// 跳转页面
+			to: function(url) {
+				this.$router.push({
+					path: '/home/' + url
+				});
 			}
 		}
 	}
@@ -74,11 +82,12 @@
 	}
 
 	.el-aside {
-		background-color: #545c64;
+		background-color: rgb(84, 92, 100);
 		color: #333;
 		text-align: center;
-		height: calc(100vh - 60px) !important;
+		/* height: calc(100vh - 60px) !important; */
 		line-height: calc(100vh - 60px);
+		overflow: hidden;
 	}
 
 	.el-main {
@@ -100,5 +109,9 @@
 
 	.el-container:nth-child(7) .el-aside {
 		line-height: 320px;
+	}
+	.a:hover{
+		cursor: pointer;
+		color: #42B983;
 	}
 </style>
