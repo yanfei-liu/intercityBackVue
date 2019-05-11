@@ -13,6 +13,10 @@ import staff from '@/components/staff/staff'
 import staffAdd from '@/components/staff/add'
 import staffUpdate from '@/components/staff/update'
 import gps from '@/components/gps/gps'
+import user from '@/components/user/user'
+import driver from '@/components/user/driver'
+import cars from '@/components/cars/cars'
+import orders from '@/components/orders/orders'
 
 // 404
 import noFile from '@/components/noFile'
@@ -109,6 +113,34 @@ export default new Router({
 					path: 'gps',
 					name: 'gps',
 					component: gps,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'user',
+					name: 'user',
+					component: user,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'driver',
+					name: 'driver',
+					component: driver,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'cars',
+					name: 'cars',
+					component: cars,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'orders',
+					name: 'orders',
+					component: orders,
 					meta: {
 						isLogin: true
 					}

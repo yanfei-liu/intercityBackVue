@@ -34,7 +34,7 @@
 							<span>客户管理</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="3-1" @click="to('customer')">用户管理</el-menu-item>
+							<el-menu-item index="3-1" @click="to('user')">用户管理</el-menu-item>
 							<el-menu-item index="3-2" @click="to('driver')">司机管理</el-menu-item>
 							<el-menu-item index="3-3" @click="to('cars')">车辆管理</el-menu-item>
 						</el-menu-item-group>
@@ -55,8 +55,7 @@
 							<span>订单管理</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="5-1" @click="to('customer')">未完成订单</el-menu-item>
-							<el-menu-item index="5-2" @click="to('driver')">订单历史查询</el-menu-item>
+							<el-menu-item index="5-1" @click="to('orders')">订单管理</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="6">
