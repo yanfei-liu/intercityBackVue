@@ -24,7 +24,7 @@
 				</el-aside>
 				<el-container>
 					<el-main>
-						<router-view />
+						<router-view/>
 					</el-main>
 					<el-footer>
 						版权所有@2019
@@ -68,10 +68,10 @@
 	.el-header,
 	.el-footer {
 		background-color: #409EFF;
-		color: rgb(179, 216, 255);
-		;
+		color: floralwhite;
 		text-align: left;
 		line-height: 60px;
+		padding: 0 15px;
 	}
 
 	.el-footer {
@@ -93,9 +93,7 @@
 	.el-main {
 		background-color: #E9EEF3;
 		color: #333;
-		text-align: center;
-		line-height: 160px;
-		padding: 5px;
+		text-align: left;
 	}
 
 	body>.el-container {
@@ -110,8 +108,13 @@
 	.el-container:nth-child(7) .el-aside {
 		line-height: 320px;
 	}
-	.a:hover{
+
+	.a:hover {
 		cursor: pointer;
 		color: #42B983;
+	}
+
+	.el-main{
+		padding: 5px;
 	}
 </style>

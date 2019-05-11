@@ -4,6 +4,15 @@ import login from '@/components/login'
 import home from '@/components/home/index'
 import right from '@/components/home/right'
 import personal from '@/components/personal/personal'
+import organization from '@/components/organization/organization'
+import department from '@/components/department/department'
+import position from '@/components/position/position'
+import jurisdiction from '@/components/jurisdiction/jurisdiction'
+import sysParameter from '@/components/sysParameter/sysParameter'
+import staff from '@/components/staff/staff'
+import staffAdd from '@/components/staff/add'
+import staffUpdate from '@/components/staff/update'
+import gps from '@/components/gps/gps'
 
 // 404
 import noFile from '@/components/noFile'
@@ -33,19 +42,82 @@ export default new Router({
 					meta: {
 						isLogin: true
 					}
-				},{
+				}, {
 					path: 'personal',
 					name: 'personal',
 					component: personal,
 					meta: {
 						isLogin: true
 					}
-				},
+				}, {
+					path: 'organization',
+					name: 'organization',
+					component: organization,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'department',
+					name: 'department',
+					component: department,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'position',
+					name: 'position',
+					component: position,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'jurisdiction',
+					name: 'jurisdiction',
+					component: jurisdiction,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'sysParameter',
+					name: 'sysParameter',
+					component: sysParameter,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'staff',
+					name: 'staff',
+					component: staff,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'staffAdd',
+					name: 'staffAdd',
+					component: staffAdd,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'staffUpdate',
+					name: 'staffUpdate',
+					component: staffUpdate,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'gps',
+					name: 'gps',
+					component: gps,
+					meta: {
+						isLogin: true
+					}
+				}
 
 
 
 
-				{
+				, {
 					path: '*',
 					name: '404',
 					component: noFile,

@@ -13,9 +13,10 @@
 							<span>系统设置</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="1-1" @click="to('organization')">组织机构</el-menu-item>
-							<el-menu-item index="1-2" @click="to('jurisdiction')">权限管理</el-menu-item>
-							<el-menu-item index="1-3" @click="to('sysParameter')">系统参数</el-menu-item>
+							<el-menu-item index="1-1" @click="to('department')">部门管理</el-menu-item>
+							<el-menu-item index="1-2" @click="to('position')">职位管理</el-menu-item>
+							<el-menu-item index="1-3" @click="to('jurisdiction')">权限管理</el-menu-item>
+							<el-menu-item index="1-4" @click="to('sysParameter')">系统参数</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="2">
@@ -44,7 +45,7 @@
 							<span>车辆监控设备</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="4-1" @click="to('customer')">GPS管理</el-menu-item>
+							<el-menu-item index="4-1" @click="to('gps')">GPS管理</el-menu-item>
 							<el-menu-item index="4-2" @click="to('driver')">监控管理</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
@@ -83,7 +84,7 @@
 					<el-submenu index="8">
 						<template slot="title">
 							<i class="el-icon-location"></i>
-							<span>客户管理</span>
+							<span>客服管理</span>
 						</template>
 						<el-menu-item-group>
 							<el-menu-item index="8-1" @click="to('customer')">投诉管理</el-menu-item>
@@ -100,10 +101,10 @@
 	export default {
 		methods: {
 			handleOpen(key, keyPath) {
-				console.log(key, keyPath);
+				// console.log(key, keyPath);
 			},
 			handleClose(key, keyPath) {
-				console.log(key, keyPath);
+				// console.log(key, keyPath);
 			},
 			// 跳转页面
 			to: function(url) {
