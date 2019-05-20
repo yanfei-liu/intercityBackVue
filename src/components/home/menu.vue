@@ -37,6 +37,7 @@
 							<el-menu-item index="3-1" @click="to('user')">用户管理</el-menu-item>
 							<el-menu-item index="3-2" @click="to('driver')">司机管理</el-menu-item>
 							<el-menu-item index="3-3" @click="to('cars')">车辆管理</el-menu-item>
+							<el-menu-item index="3-4" @click="to('userToDirver')">用户升级司机</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="4">

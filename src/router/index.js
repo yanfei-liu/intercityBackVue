@@ -17,6 +17,7 @@ import user from '@/components/user/user'
 import driver from '@/components/user/driver'
 import cars from '@/components/cars/cars'
 import orders from '@/components/orders/orders'
+import userToDirver from '@/components/usertodirver/userToDirver'
 
 // 404
 import noFile from '@/components/noFile'
@@ -127,6 +128,13 @@ export default new Router({
 					path: 'driver',
 					name: 'driver',
 					component: driver,
+					meta: {
+						isLogin: true
+					}
+				}, {
+					path: 'userToDirver',
+					name: 'userToDirver',
+					component: userToDirver,
 					meta: {
 						isLogin: true
 					}

@@ -24,44 +24,49 @@
 			</el-form>
 		</el-header>
 		<el-main>
-			<el-table :data="tableData" style="width: 100%">
-				<!-- <el-table-column type="expand">
+			<el-table :data="tableData" style="width: 100%" stripe="true">
+				<el-table-column type="expand">
 					<template slot-scope="props">
 						<el-form label-position="left" inline class="demo-table-expand">
-							<el-form-item label="车辆颜色">
-								<span>{{ props.row.carColour }}</span>
+							<el-form-item label="乘坐人数">
+								<span>{{ props.row.presion_number }}</span>
 							</el-form-item>
-							<el-form-item label="车辆品牌">
-								<span>{{ props.row.carBrandId }}</span>
+							<el-form-item label="订单金额">
+								<span>{{ props.row.order_amount }}</span>
 							</el-form-item>
-							<el-form-item label="车辆型号">
-								<span>{{ props.row.carTypeId }}</span>
+							<el-form-item label="接单人">
+								<span>{{ props.row.jie_dan_presion }}</span>
 							</el-form-item>
-							<el-form-item label="车辆准乘数量">
-								<span>{{ props.row.carSeatSize }}</span>
+							<el-form-item label="结单时间">
+								<span>{{ props.row.jie_dan_time }}</span>
 							</el-form-item>
-							<el-form-item label="车辆类型">
-								<span>{{ props.row.carClassificationId }}</span>
+							<el-form-item label="结算时间">
+								<span>{{ props.row.setting_time }}</span>
+							</el-form-item>
+							<el-form-item label="结算人">
+								<span>{{ props.row.setting_presion }}</span>
 							</el-form-item>
 						</el-form>
 					</template>
-				</el-table-column> -->
+				</el-table-column>
 				<el-table-column label="序号">
 					<template slot-scope="scope">
 						{{scope.$index + 1}}
 					</template>
 				</el-table-column>
-				<el-table-column label="订单编号" prop="weChatId">
+				<el-table-column label="订单编号" prop="order_sn">
 				</el-table-column>
-				<el-table-column label="创建时间" prop="carRelgionId">
+				<el-table-column label="下单时间" prop="order_time">
 				</el-table-column>
-				<el-table-column label="司机" prop="licensePlateEnd">
+				<el-table-column label="创建人" prop="create_presion">
 				</el-table-column>
-				<el-table-column label="乘客名称" prop="licensePlateEnd">
+				<el-table-column label="出发地点" prop="place_of_departure">
 				</el-table-column>
-				<el-table-column label="起始地点" prop="licensePlateEnd">
+				<el-table-column label="目标地点" prop="destination">
 				</el-table-column>
-				<el-table-column label="结束地点" prop="licensePlateEnd">
+				<el-table-column label="出发时间" prop="departure_time">
+				</el-table-column>
+				<el-table-column label="订单状态" prop="order_type">
 				</el-table-column>
 				<el-table-column align="right">
 					<template slot="header" slot-scope="scope">
@@ -87,44 +92,64 @@
 			return {
 				tableData: [{
 					uuid: '1',
-					weChatId: 'ljl546sfd3sd3ds',
-					carRelgionId: '冀',
-					licensePlateEnd: '369GH',
-					carColour: '红色',
-					carBrandId: '斯堪尼亚',
-					carTypeId: 'S750',
-					carSeatSize: 5,
-					carClassificationId: 'SUV'
+					order_sn: '201905202119123',
+					order_time: '2019-05-20 21:19',
+					create_presion: '王xx',
+					place_of_departure: '辛集市客运总站',
+					destination: '石家庄白佛客运站',
+					departure_time: '2019-05-20 21:19',
+					order_type: '进行中',
+					presion_number: '4',
+					order_amount:'￥180.00元',
+					jie_dan_presion:'陈xx',
+					jie_dan_time:'2019-05-20 21:19',
+					setting_time:'2019-05-20 21:19',
+					setting_presion:'陈兄'
 				}, {
 					uuid: '2',
-					weChatId: 'ljl546sfd3sd3ds',
-					carRelgionId: '冀',
-					licensePlateEnd: '369GH',
-					carColour: '红色',
-					carBrandId: '斯堪尼亚',
-					carTypeId: 'S750',
-					carSeatSize: 5,
-					carClassificationId: 'SUV'
+					order_sn: '201905202119123',
+					order_time: '2019-05-20 21:19',
+					create_presion: '王xx',
+					place_of_departure: '辛集市客运总站',
+					destination: '石家庄白佛客运站',
+					departure_time: '2019-05-20 21:19',
+					order_type: '进行中',
+					presion_number: '4',
+					order_amount:'￥180.00元',
+					jie_dan_presion:'陈xx',
+					jie_dan_time:'2019-05-20 21:19',
+					setting_time:'2019-05-20 21:19',
+					setting_presion:'陈兄'
 				}, {
 					uuid: '3',
-					weChatId: 'ljl546sfd3sd3ds',
-					carRelgionId: '冀',
-					licensePlateEnd: '369GH',
-					carColour: '红色',
-					carBrandId: '斯堪尼亚',
-					carTypeId: 'S750',
-					carSeatSize: 5,
-					carClassificationId: 'SUV'
+					order_sn: '201905202119123',
+					order_time: '2019-05-20 21:19',
+					create_presion: '王xx',
+					place_of_departure: '辛集市客运总站',
+					destination: '石家庄白佛客运站',
+					departure_time: '2019-05-20 21:19',
+					order_type: '进行中',
+					presion_number: '4',
+					order_amount:'￥180.00元',
+					jie_dan_presion:'陈xx',
+					jie_dan_time:'2019-05-20 21:19',
+					setting_time:'2019-05-20 21:19',
+					setting_presion:'陈兄'
 				}, {
 					uuid: '4',
-					weChatId: 'ljl546sfd3sd3ds',
-					carRelgionId: '冀',
-					licensePlateEnd: '369GH',
-					carColour: '红色',
-					carBrandId: '斯堪尼亚',
-					carTypeId: 'S750',
-					carSeatSize: 5,
-					carClassificationId: 'SUV'
+					order_sn: '201905202119123',
+					order_time: '2019-05-20 21:19',
+					create_presion: '王xx',
+					place_of_departure: '辛集市客运总站',
+					destination: '石家庄白佛客运站',
+					departure_time: '2019-05-20 21:19',
+					order_type: '进行中',
+					presion_number: '4',
+					order_amount:'￥180.00元',
+					jie_dan_presion:'陈xx',
+					jie_dan_time:'2019-05-20 21:19',
+					setting_time:'2019-05-20 21:19',
+					setting_presion:'陈兄'
 				}],
 				form: {
 					code: '',
